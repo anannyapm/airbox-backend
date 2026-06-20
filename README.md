@@ -16,6 +16,7 @@ This folder is the single home for all backend implementation, learning, and mig
 2. Read [`SESSION_STATE.md`](./SESSION_STATE.md) to see the current learning position.
 3. Follow [`ROADMAP.md`](./ROADMAP.md) for the day-by-day learning path.
 4. Use [`BRIDGE_PLAN.md`](./BRIDGE_PLAN.md) when mapping the current Flutter app to the new backend.
+5. Run the backend scaffold from this folder once dependencies are installed.
 
 ## Working style
 
@@ -32,7 +33,18 @@ This folder is the single home for all backend implementation, learning, and mig
 - Docker / Docker Compose
 - Cloudinary for file storage until the migration bridge says otherwise
 
+## Starter scaffold
+
+This workspace now includes a minimal NestJS backend scaffold:
+
+- GraphQL setup
+- PostgreSQL/TypeORM wiring
+- A `health` query
+- A `users` query
+- Docker Compose service for the Nest app
+
+The scaffold is intentionally small so you can understand each piece before expanding it.
+
 ## Resume rule
 
 If you stop and come back later, do not restart from scratch. Open `SESSION_STATE.md` and continue from the next incomplete item.
-

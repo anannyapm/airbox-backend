@@ -11,6 +11,7 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
 
   hasura:
     image: hasura/graphql-engine:v2.44.0
@@ -25,6 +26,25 @@ services:
       HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
     depends_on:
       - postgres
+
+  nestjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nestjs-backend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/dropbox_clone
+      JWT_SECRET: change_me
+    depends_on:
+      - postgres
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    command: npm run start:dev
 
 volumes:
   postgres_data:

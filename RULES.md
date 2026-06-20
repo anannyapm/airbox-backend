@@ -37,6 +37,15 @@ These rules define how backend work in this workspace should be planned, learned
   - what was implemented
   - what remains open
 
+## Teaching contract
+
+1. **You run, I explain.** I tell you what to run and why. You type the commands. This builds muscle memory.
+2. **Validate before moving on.** I will ask you questions to confirm you understood. If you can't answer, we re-explain.
+3. **Track everything.** Every concept learned, command run, and file created goes into `LEARNING_LOG.md`. We never restart from scratch.
+4. **Explain in depth.** I explain what a concept is, why it exists, where it appears in this project, and how to verify it.
+5. **You ask anything.** If something is unclear, say so. There are no dumb questions.
+6. **One step at a time.** We never jump ahead until the current step is clear.
+
 ## Backend implementation rules
 
 - Keep NestJS concerns inside backend modules.
