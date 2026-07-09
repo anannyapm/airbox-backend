@@ -12,14 +12,14 @@ export class UserEntity {
   @Column({ type: 'text', unique: true })
   email!: string;
 
-  @Field({ nullable: true })
+  @Field(()=>String,{ nullable: true })
   @Column({ type: 'text', nullable: true })
   name!: string | null;
 
   @Column({ name: 'password_hash', type: 'text' })
   passwordHash!: string;
 
-  @Field({ nullable: true })
+  @Field(()=>String,{ nullable: true })
   @Column({ name: 'photo_url', type: 'text', nullable: true })
   photoUrl!: string | null;
 

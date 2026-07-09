@@ -26,7 +26,7 @@ export class FileShareEntity {
   @Column({ name: 'shared_by', type: 'uuid' })
   sharedBy!: string;
 
-  @Field({ nullable: true })
+  @Field(()=>String,{ nullable: true })
   @Column({ name: 'shared_with', type: 'text', nullable: true })
   sharedWith!: string | null;
 
@@ -34,7 +34,7 @@ export class FileShareEntity {
   @Column({ type: 'text' })
   permission!: 'read' | 'write';
 
-  @Field({ nullable: true })
+  @Field(()=> String, { nullable: true })
   @Column({ name: 'link_token', type: 'text', nullable: true, unique: true })
   linkToken!: string | null;
 
@@ -42,7 +42,7 @@ export class FileShareEntity {
   @Column({ name: 'is_active', type: 'boolean', default: true })
   isActive!: boolean;
 
-  @Field({ nullable: true })
+  @Field(()=> Date, { nullable: true })
   @Column({ name: 'expires_at', type: 'timestamptz', nullable: true })
   expiresAt!: Date | null;
 

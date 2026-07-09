@@ -27,7 +27,7 @@ export class FileEntity {
   @Column({ type: 'text' })
   url!: string;
 
-  @Field({ nullable: true })
+  @Field(()=> String,{ nullable: true })
   @Column({ name: 'thumbnail_url', type: 'text', nullable: true })
   thumbnailUrl!: string | null;
 
