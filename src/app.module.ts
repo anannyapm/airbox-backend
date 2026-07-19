@@ -12,6 +12,7 @@ import { FolderEntity } from './database/entities/folder.entity';
 import { FileEntity } from './database/entities/file.entity';
 import { FileShareEntity } from './database/entities/file-share.entity';
 import { StorageEntity } from './database/entities/storage.entity';
+import { FoldersModule } from './folders/folders.module';
 
 @Module({
   imports: [
@@ -41,6 +42,7 @@ import { StorageEntity } from './database/entities/storage.entity';
     }),
     HealthModule,
     UsersModule,
+    FoldersModule
   ],
 })
-export class AppModule {}
+export class AppModule { }

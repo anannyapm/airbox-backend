@@ -81,3 +81,36 @@ Tracks every concept, command, and file we learn together. Append-only — never
 ### Checkpoint status
 
 - ✅ Can describe the schema: users, folders, files, shares, and storage tables and explain why key fields are shaped the way they are.
+
+---
+
+## Lesson 4: NestJS Fundamentals — Modules, Providers, DI, Resolvers
+
+**Date:** 2026-07-19
+**Status:** ✅ Completed
+
+### Concepts learned
+
+- **Module (`@Module`)** — Groups related code (resolver, service, entity). Imports what it needs, provides what it has.
+- **Provider (`@Injectable`)** — A class NestJS can instantiate and inject. Services are the most common provider.
+- **Dependency Injection** — NestJS reads constructor parameters, creates dependencies automatically, and injects them. No manual `new`.
+- **Resolver vs Controller** — Resolver = GraphQL entry point (`@Query`). Controller = REST entry point (`@Get`). Same role, different protocol.
+- **`@Args`** — Declares a GraphQL query argument. Syntax: `@Args('name', { type: () => String }) name: string`.
+- **`IsNull()`** — TypeORM helper for SQL `IS NULL` queries.
+
+### Key commands learned
+
+- `npm run build` — Compiles the NestJS project
+
+### Key files created
+
+- `src/folders/folders.module.ts` — Module wiring with TypeORM import
+- `src/folders/folders.service.ts` — Business logic: find root folders for an owner
+- `src/folders/folders.resolver.ts` — GraphQL resolver: `rootFolders(ownerId)` query
+
+### Checkpoint status
+
+- ✅ Can explain what a module, provider, and resolver are in NestJS.
+- ✅ Can build a new module from scratch following the pattern.
+- ✅ Can write a service method that queries the database.
+- ✅ Can wire a GraphQL resolver with typed arguments.

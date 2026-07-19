@@ -20,16 +20,22 @@ This file is the backend handoff point. Update it after each meaningful step so 
 
 ## In progress
 
-- **Day 3 Lesson 3:** NestJS Modules — what they are, why they exist, how they wire code together.
+- (none)
+
+## Completed
+
+- Day 3: NestJS Modules, Providers/DI, Controllers vs Resolvers explained.
+- Day 3 Task: Built Folders module end to end (student wrote all files):
+  - `folders.module.ts` — module wiring
+  - `folders.service.ts` — `findRootFolders()` query
+  - `folders.resolver.ts` — `rootFolders` GraphQL query
+  - Registered in `AppModule`
+  - Build verified ✅
 
 ## Next
 
-1. Concept: NestJS Modules (using `HealthModule` as the example).
-2. Concept: Providers and Dependency Injection (using `UsersService` as the example).
-3. Concept: Controllers vs Resolvers in this GraphQL project.
-4. Task: Build one small module end to end (a new feature slice).
-5. Concept: Configuration and environment variables (`ConfigModule`, `env.validation`).
-6. Verification: Run the new module and confirm its GraphQL query works.
+1. Concept: Configuration and environment variables (`ConfigModule`, `env.validation`).
+2. Integration test: Run the app with Docker and verify `rootFolders` query via GraphQL playground.
 
 ## Learning log
 
