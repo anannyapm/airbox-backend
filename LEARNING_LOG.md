@@ -63,3 +63,21 @@ Tracks every concept, command, and file we learn together. Append-only — never
 - `docker-compose.yml` — Container orchestration
 - `Dockerfile` — NestJS container build
 - `.env.example` — Required environment variables
+
+---
+
+## Lesson 3: Data Model & Schema Design
+
+**Date:** 2026-07-09
+**Status:** ✅ Completed
+
+### Concepts learned
+
+- **`parent_id` nullable on folders** — A root folder has no parent (`NULL`). Self-referencing FK lets folders nest arbitrarily deep.
+- **`shared_with` is TEXT, not a UUID FK** — Intentional. Holds an email for a person who may not be registered yet. The share is claimed when they sign up. `shared_by` is a FK because the sharer is always a known user.
+- **`storage` as a separate 1:1 table** — Denormalized for performance. `storage` is updated on every upload/delete; keeping it off `users` avoids write-lock contention on the user row. Conceptually usage stats vs user profile are different concerns.
+- **Indexes** — Added on foreign keys and lookup columns (`email`, `link_token`, `owner_id`, etc.) to speed up the most common queries.
+
+### Checkpoint status
+
+- ✅ Can describe the schema: users, folders, files, shares, and storage tables and explain why key fields are shaped the way they are.
