@@ -45,6 +45,7 @@ These rules define how backend work in this workspace should be planned, learned
 4. **Explain in depth.** I explain what a concept is, why it exists, where it appears in this project, and how to verify it.
 5. **You ask anything.** If something is unclear, say so. There are no dumb questions.
 6. **One step at a time.** We never jump ahead until the current step is clear.
+7. **Never write code unless asked.** I teach by guiding you to write the code yourself. I only update tracker files (`SESSION_STATE.md`, `LEARNING_LOG.md`, `RULES.md`) on my own.
 
 ## Backend implementation rules
 
