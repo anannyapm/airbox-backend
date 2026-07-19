@@ -114,3 +114,11 @@ Tracks every concept, command, and file we learn together. Append-only — never
 - ✅ Can build a new module from scratch following the pattern.
 - ✅ Can write a service method that queries the database.
 - ✅ Can wire a GraphQL resolver with typed arguments.
+
+### Config & env concepts learned
+
+- **`.env` file** — Holds secrets/env vars. Not committed to git.
+- **`validateEnv()`** — Startup guard that crashes early if required vars are missing.
+- **`ConfigModule.forRoot()`** — Loads `.env`, makes `ConfigService` available.
+- **`ConfigService`** — Read env vars anywhere via DI: `configService.get('KEY', default)` or `getOrThrow('KEY')`.
+- **`app.get(ConfigService)`** — How to access DI outside of classes (e.g., `main.ts`).

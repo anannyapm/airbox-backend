@@ -31,11 +31,12 @@ This file is the backend handoff point. Update it after each meaningful step so 
   - `folders.resolver.ts` — `rootFolders` GraphQL query
   - Registered in `AppModule`
   - Build verified ✅
+- Day 3: Configuration & Environment Variables — `ConfigModule`, `validateEnv`, `ConfigService`.
+  - Refactored `main.ts` to use `ConfigService` instead of raw `process.env`
 
 ## Next
 
-1. Concept: Configuration and environment variables (`ConfigModule`, `env.validation`).
-2. Integration test: Run the app with Docker and verify `rootFolders` query via GraphQL playground.
+1. Integration test: Run the app with Docker and verify `rootFolders` query via GraphQL playground.
 
 ## Learning log
 
