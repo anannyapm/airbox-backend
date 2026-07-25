@@ -4,7 +4,7 @@ This file is the backend handoff point. Update it after each meaningful step so 
 
 ## Current status
 
-- **Phase:** Day 3 — NestJS fundamentals
+- **Phase:** Day 4 — GraphQL fundamentals
 - **Learning mode:** Interactive (hands-on, student-driven)
 - **Focus:** Core stack plus migration bridge
 
@@ -20,7 +20,7 @@ This file is the backend handoff point. Update it after each meaningful step so 
 
 ## In progress
 
-- (none)
+- Day 4: GraphQL Fundamentals — building `createFolder` mutation
 
 ## Completed
 
@@ -33,10 +33,13 @@ This file is the backend handoff point. Update it after each meaningful step so 
   - Build verified ✅
 - Day 3: Configuration & Environment Variables — `ConfigModule`, `validateEnv`, `ConfigService`.
   - Refactored `main.ts` to use `ConfigService` instead of raw `process.env`
+- Day 3 Integration Test: Docker stack running, `rootFolders` query verified via GraphQL playground ✅
 
 ## Next
 
-1. Integration test: Run the app with Docker and verify `rootFolders` query via GraphQL playground.
+1. Build `createFolder` mutation (Day 4 task).
+2. Test mutation via GraphQL playground.
+3. Learn remaining GraphQL concepts: queries vs mutations, input types, resolver wiring.
 
 ## Learning log
 
